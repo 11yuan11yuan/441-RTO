@@ -1,3 +1,4 @@
+//My name is Susan(Zhou Jingyuan).
 // Function to set the user information in local storage
 function setUsername() {
   const firstnameInput = document.getElementById('firstnameInput').value.trim();
@@ -175,7 +176,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (productQuantity > 0) {
                 const cartItem = document.createElement('li');
-                cartItem.textContent = `${productName} - ${productPrice} x ${productQuantity}`;
+                const itemTotalPrice = productPrice * productQuantity;
+                cartItem.textContent = `${productName} - ${productPrice} x ${productQuantity} =${itemTotalPrice}`;
                 cartItem.dataset.id = productId;
 
                 const removeFromCartButton = document.createElement('button');
