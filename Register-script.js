@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function() {
     addToCartButtons.forEach(function (button) {
         button.addEventListener('click', function () {
             const productId = this.parentElement.dataset.id;
-            const productName = this.parentElement.querySelector('h4').textContent;
+            const productName = this.parentElement.querySelector('h3').textContent;
             const productPrice = parseInt(this.parentElement.querySelector('p').textContent.replace('Prices: $', ''));
             const productQuantity = parseInt(this.parentElement.querySelector('input').value);
 
