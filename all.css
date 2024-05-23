@@ -319,7 +319,7 @@ h2{
   margin-top: 10px;
   font-weight: bold;
   color: black;
-  font-size:large;
+  font-size:x-large;
   text-align: center;
 }
 
@@ -439,7 +439,7 @@ button:hover {
 
 .product {
   flex-basis: 23%;
-  height: 290px;
+  height: 300px;
   margin-bottom: 20px;
   text-align: center;
   margin: 10px;
@@ -457,10 +457,19 @@ button:hover {
 
 .product p{
   color: brown;
+  font-size: large;
+  font-weight: bold;
 }
 
 .colored-text{
   color: #6ca2c7;
+}
+
+#totalPrice{
+  text-align: center;
+  font-weight: bold;
+  color: brown;
+  font-size: larger;
 }
 
 .cart-container {
@@ -493,6 +502,8 @@ button:hover {
   display: flex;
   margin-bottom: 20px; 
   margin-left: 10px; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .cart-actions button {
