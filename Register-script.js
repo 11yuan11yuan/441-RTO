@@ -296,3 +296,73 @@ function newElement() {
     };
   }
 }
+
+//Function to calculator
+let table = document.querySelector("#mytable"); 
+let resultCell = table.rows[0].cells[0]; // Get the first cell of the table  
+  
+function addNumChar(element) {  
+    resultCell.innerText += element.innerText;  
+}   
+let isOperatorPresent = false;  
+function addOperationChar(element) {  
+    let lastChar = resultCell.innerText.slice(-1); 
+    let newChar = element.innerText;  
+   
+    if (isOperatorPresent && "+-*/".includes(lastChar) && newChar !== ".") {    
+        resultCell.innerText = resultCell.innerText.slice(0, -1) + newChar;  
+    } else if (lastChar === "%" && newChar === ".") {  
+    } else if ("+-*/".includes(lastChar) && newChar !== ".") {    
+    } else if (lastChar === "." && newChar === ".") {  
+    } else {  
+        resultCell.innerText += newChar;  
+   
+        if ("+-*/%".includes(newChar) && newChar !== "%") {  
+            isOperatorPresent = true;  
+        } else {  
+            isOperatorPresent = false;
+        }  
+    }  
+}
+  
+function clearAll() {  
+    resultCell.innerText = "";  
+}  
+ 
+function backSpace() {  
+    if (resultCell.innerText.length > 0) {  
+        resultCell.innerText = resultCell.innerText.slice(0, -1); 
+    }  
+}   
+  
+function pluMinChange() {  
+  let num = Number(resultCell.innerText);  
+  if (!isNaN(num)) {  
+      let lastChar = resultCell.innerText.slice(-1); 
+      if (num > 0 && !"+-*/".includes(lastChar)) {  
+          resultCell.innerText = "-" + resultCell.innerText;  
+      } else if (num < 0 && !"+-*/".includes(lastChar)) {  
+          resultCell.innerText = resultCell.innerText.slice(1);  
+      } else {  
+          resultCell.innerText += "-";    
+      }  
+  }  
+}
+
+function solveOut() {  
+  try {  
+      let expression = resultCell.innerText;  
+      if (expression.includes('%')) {  
+          expression = expression.replace(/(\d+)%/g, (match, number) => (Number(number) / 100).toString());  
+      }  
+
+      let result = eval(expression); 
+      if (!isNaN(result)) {  
+          resultCell.innerText = result;  
+      } else {  
+          resultCell.innerText = "error";  
+      }  
+  } catch (e) {  
+      resultCell.innerText = "error"; 
+  }  
+}
