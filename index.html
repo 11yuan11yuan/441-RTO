@@ -55,6 +55,44 @@
   </div>  
 </section>  
 
+<h1 style="text-align:center">Calculator</h1>
+        <table id="mytable">
+                <tr>
+                <td id="result" colspan="4">
+                </td>
+                </tr>
+                <tr>
+                <td class="buttons" id="clearAll" onclick="clearAll()" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">Clear</td>
+                <td class="buttons" id="backSpace" onclick="backSpace()" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">Backspace</td>
+                <td class="buttons" id="buttons9" onclick="pluMinChange()" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">+/-</td>
+                <td class="buttons" id="divide" onclick="addOperationChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">/</td>
+                </tr>
+                <tr>
+                <td class="buttons" id="buttons7" onclick="addNumChar(this)" mouseover="console.log(1)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">7</td>
+                <td class="buttons" id="buttons8" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">8</td>
+                <td class="buttons" id="buttons9" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">9</td>
+                <td class="buttons" id="multiply" onclick="addOperationChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">*</td>
+                </tr>
+                <tr>
+                <td class="buttons" id="buttons4" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">4</td>
+                <td class="buttons" id="buttons5" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">5</td>
+                <td class="buttons" id="buttons6" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">6</td>
+                <td class="buttons" id="minus" onclick="addOperationChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">-</td>
+                </tr>
+                <tr>
+                <td class="buttons" id="buttons1" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">1</td>
+                <td class="buttons" id="buttons2" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">2</td>
+                <td class="buttons" id="buttons3" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">3</td>
+                <td class="buttons" id="plus" onclick="addOperationChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">+</td>
+                </tr>
+                <tr>
+                <td class="buttons" id="percent" onclick="addOperationChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">%</td>
+                <td class="buttons" id="buttons0" onclick="addNumChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">0</td>
+                <td class="buttons" id="point" onclick="addOperationChar(this)" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">.</td>
+                <td class="buttons" id="equal" onclick="solveOut()" onmouseover="this.style.backgroundColor='#9ECED8'" onmouseout="this.style.backgroundColor='#ffffff'">=</td>
+                </tr>
+        </table>
+
 <div id="myDIV" class="toheader">  
   <h2>User To Do List</h2>  
   <div class="input-container">  
